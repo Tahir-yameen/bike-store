@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+        <header>
+            <a href="index.html"><img src="hondalogo.png" class="logo"></a>
+            <div class="group">
+                <div class="toggle"></div>
+                <ul class="navigation">
+                    <li><a href="#">Top Features</a></li>
+                    <li><a href="./gallery.html">Gallery</a></li>
+                    <li><a href="./store.html">Store</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+                <div class="dayNight">
+                    <ion-icon name="sunny-outline" class="active"></ion-icon>
+                    <ion-icon name="moon-outline"></ion-icon>
+                </div>
+            </div>
+        </header>
+
+        <div class="containertf">
+            <div class="cardtf">
+                <div class="imgBx">
+                    <img src="tp01.png">
+                </div>
+                <div class="contenttf">
+                    <h2>Streamlined Design</h2>
+                    <p>Aerodynamic body for enhanced performance and style.</p>
+                </div>
+            </div>
+    
+            <div class="cardtf">
+                <div class="imgBx">
+                    <img src="tp02.png">
+                </div>
+                <div class="contenttf">
+                    <h2>LED Lighting</h2>
+                    <p>Modern headlights and tail lights for better visibility and energy efficiency.</p>
+                </div>
+            </div>
+    
+            <div class="cardtf">
+                <div class="imgBx">
+                    <img src="tp03.png">
+                </div>
+                <div class="contenttf">
+                    <h2>Advanced Suspension</h2>
+                    <p>Improved comfort with front and rear suspension systems.</p>
+                </div>
+            </div>
+    
+            <div class="cardtf">
+                <div class="imgBx">
+                    <img src="tp04.png">
+                </div>
+                <div class="contenttf">
+                    <h2>Digital Dashboard</h2>
+                    <p>Provides real-time information like speed, fuel, and navigation.</p>
+                </div>
+            </div>
+    
+            <div class="cardtf">
+                <div class="imgBx">
+                    <img src="tp05.png">
+                </div>
+                <div class="contenttf">
+                    <h2>Efficient Engine</h2>
+                    <p>Known for high performance and fuel efficiency.</p>
+                </div>
+            </div>
+    
+            <div class="cardtf">
+                <div class="imgBx">
+                    <img src="tp06.png">
+                </div>
+                <div class="contenttf">
+                    <h2>Alloy Wheels</h2>
+                    <p>Durable and stylish wheels for all-terrain stability.</p>
+                </div>
+            </div>
+    
+            <div class="cardtf">
+                <div class="imgBx">
+                    <img src="tp07.png">
+                </div>
+                <div class="contenttf">
+                    <h2>Comfortable Seating</h2>
+                    <p>Ergonomically designed seats for long rides.</p>
+                </div>
+            </div>
+    
+            <div class="cardtf">
+                <div class="imgBx">
+                    <img src="tp08.png">
+                </div>
+                <div class="contenttf">
+                    <h2>Smart Connectivity</h2>
+                    <p>Features like Bluetooth pairing and smartphone integration.</p>
+                </div>
+            </div>
+    
+            <div class="cardtf">
+                <div class="imgBx">
+                    <img src="tp09.png">
+                </div>
+                <div class="contenttf">
+                    <h2>Safety Features</h2>
+                    <p>Includes ABS (Anti-lock Braking System) and traction control.</p>
+                </div>
+            </div>
+    
+            <div class="cardtf">
+                <div class="imgBx">
+                    <img src="tp010.jpg">
+                </div>
+                <div class="contenttf">
+                    <h2>Eco-Friendly Technology</h2>
+                    <p>Reduced emissions with efficient fuel technology.</p>
+                </div>
+            </div>
+    
+        </div>
+        
+        <script type="text/javascript" src="vanilla-tilt.js">
+    
+        </script>
+        <script type="text/javascript">
+            VanillaTilt.init(document.querySelectorAll(".cardtf"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+            });
+        </script>
+
+
+        <div class="footer">
+            <ul class="sci">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+
+        // Day/Night mode
+        const dayNight = document.querySelector('.dayNight');
+        const body = document.querySelector('body');
+        dayNight.onclick = function(){
+            dayNight.classList.toggle('active');
+            body.classList.toggle('light');
+        }
+
+
+        // Navigation
+        const toggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+        toggle.onclick = function(){
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+        // Slides
+        const slides = document.querySelectorAll('.slides');
+        const dots = document.querySelectorAll('.dot');
+
+        function setActive(i){
+            for(slide of slides)
+            slide.classList.remove('active');        
+            slides[i].classList.add('active');
+
+            for(dot of dots)
+            dot.classList.remove('active');        
+            dots[i].classList.add('active');
+            
+        }
+
+            for(let j=0; j<dots.length; j++){
+                dots[j].addEventListener('click', function(){
+                    setActive(j);
+                });
+            }
+    </script>
+</body>
+</html>
