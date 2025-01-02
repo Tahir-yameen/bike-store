@@ -409,7 +409,7 @@ header
    display: flex;
    justify-content: space-between;
    align-items: center;
-   color: var(--white);
+   /* color: var(--white); */
    cursor: pointer;
    padding: 20px;
  }
@@ -537,7 +537,7 @@ header
    }
    .container:hover .card
    {
-      transform: rotate(calc(var(--k) * 2deg)) translate(calc(var(--k) * 20px), -20px);
+      transform: rotate(calc(var(--k) * 30deg)) translate(calc(var(--k) * 20px), -20px);
    }
    .container .card::after
    {
@@ -638,6 +638,11 @@ header
       font-size: 1.5em;
       margin: 10px 0;
       display: inline-block;
+   }
+   .content .spimg
+   {
+      width: 100%;
+      height: 100%;
    }
    .group
    {
