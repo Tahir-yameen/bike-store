@@ -409,7 +409,6 @@ header
    display: flex;
    justify-content: space-between;
    align-items: center;
-   /* color: var(--white); */
    cursor: pointer;
    padding: 20px;
  }
@@ -483,6 +482,18 @@ header
    {
       padding: 40px;
    }
+   .light .main
+   {
+      background: #fff;
+   }
+   .main::before
+   {
+      display: none;
+   }
+   .light .main::before
+   {
+      color: rgba(0,0,0,0.05);
+   }
    header
    {
       padding: 20px 40px;
@@ -547,7 +558,7 @@ header
    }
    .container .card:hover::after
    {
-      transform: scaleY(20);
+      transform: scaleY(15);
    }
    .container .card::before
    {
